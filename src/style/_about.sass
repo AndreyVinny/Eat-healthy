@@ -1,0 +1,105 @@
+.about
+    margin: 120px 40px
+        
+.about_cont_block
+    @include flex (row, space-between, center, nowrap)
+    
+.about_cont_block2
+    @include flex (row-reverse, space-between, center, nowrap)
+
+.block_text
+    width: 50%
+    padding-right: 80px
+    margin-top: 50px
+    h2  
+        font-size: 66px
+        font-weight: 400
+        margin-bottom: 30px
+    p
+        font-size: 22px
+        color: $colot_fon
+        padding-bottom: 84px
+    a
+        padding: 16px 41px
+        background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%)   
+        text-decoration: none
+        color: #fff 
+        border-radius: 25px
+
+.about_cont_block2
+    .block_text
+        padding-left: 80px
+        padding-right: 0px
+    .block_img
+        margin-top: 50px
+        max-height: 80%
+        min-width: 50%
+        background: #E1F2E1
+        border-radius: 50%
+        img
+            position: relative
+            top: -40px
+            max-height: 100%
+            min-width: 100%
+
+.block_img
+    @include flex (row, center, center, nowrap)
+    width: 50%
+    .block_img_box1
+        img
+            margin: 10px 10px 10px 0px
+    .block_img_box2
+        img
+            margin: 100px 0px 0px 10px
+  
+.about_cont_block3
+    .block_text
+        p
+            padding-bottom: 50px
+        .about_blok_list
+            list-style-type: none
+            li
+                margin-bottom: 15px
+                color: $colot_fon
+                font-size: 20px
+                span
+                    background: $color_spec_1
+                    color: #fff
+                    padding: 5px
+                    margin-right: 15px
+                    border-radius: 5px
+
+@media (max-width: $pc) 
+    .about_cont_block
+        @include flex (column, center, center, nowrap)
+
+    .about_cont_block
+        .block_text
+            width: 100%
+            padding-left: 0px
+            padding-right: 0px
+
+@media (max-width: $notebook)
+    .about
+        margin: 120px 0px
+
+    .block_text
+        padding: 10px
+
+    .block_img
+        margin-top: 50px
+        .block_img_box1
+            img
+            
+                width: 80%
+        .block_img_box2
+            img
+    
+                width: 80%
+
+@media (max-width: $mobile)
+    .block_text
+        h2  
+            font-size: 55px
+        p
+            font-size: 18px

@@ -1,0 +1,68 @@
+.clients
+    background: $bg_client
+    margin-top: 136px
+
+.clients_cont
+    h2
+        font-size: 54px
+        font-weight: 400
+        padding: 70px 0px 50px
+        text-align: center
+
+.clients_cont_block
+    @include flex (row, center, center, nowrap)
+
+.clients_box
+    position: relative
+    width: 514px
+    padding: 40px 31px 60px 27px
+    background: #fff
+    border-radius: 25px
+    margin: 0px 25px
+    .clients_box_top
+        @include flex (row, flex-star, center, nowrap)
+        position: relative
+        margin-bottom: 32px
+        z-index: 5
+        img
+            padding-right: 37px
+        h4  
+            font-size: 20px
+        p
+            font-size: 14px
+            color: $colot_fon
+            font-weight: 300
+    .clients_box_text
+        p
+            color: $colot_fon   
+
+.clients_box
+    &::before
+        content: url(../src/img/clients/com.svg) 
+        display: block
+        width: 90px
+        height: 80px
+        position: absolute
+        top: 50px
+        right: 0
+        z-index: 1
+
+.clients_cont_move
+    text-align: center
+    font-size: 40px
+    color: $colot_fon
+    padding: 50px 0px 70px
+    span
+        cursor: pointer
+        &:hover,
+        &:focus,
+        &:active
+            color: $color_text_spec
+        
+@media (max-width: $notebook) 
+    .clients_cont_block
+        @include flex (column, center, center, nowrap)
+
+@media (max-width: $tablet) 
+    .clients_box
+        width: 90%

@@ -1,0 +1,63 @@
+footer
+    background: $bg_client
+    padding-top: 114px
+
+.footet_cont
+    @include flex (row, flex-satr, center, nowrap)
+
+.footet_cont_block
+    width: 300px
+    margin-right: 80px
+    h3
+        font-size: 26px
+        padding-bottom: 36px
+        font-weight: 400
+        a
+            text-decoration: none
+            color: #000
+    p
+        color: $colot_fon
+    
+.footet_cont_block2
+    @include flex (row, space-between, center, nowrap)
+    width: 100%
+    h3  
+        font-size: 22px
+        padding-bottom: 20px
+        font-weight: 400
+    ul
+        list-style-type: none
+        li
+            padding-bottom: 12px
+            a
+                text-decoration: none
+                color: $colot_fon
+
+.footer_right
+    text-align: center
+    background: linear-gradient(180deg, #64BB47 0%, #2C9553 100%)
+    margin-top: 170px
+    color: #fff
+    padding: 20px 0px
+    font-size: 16px 
+    font-weight: 300
+
+@media (max-width: $tablet) 
+    .footet_cont
+        @include flex (row, flex-satr, center, wrap)
+    
+    .footet_cont_block2
+        margin-top: 20px
+
+    .footer_right
+        margin-top: 100px
+    
+
+@media (max-width: $mobile) 
+    .footet_cont_block2
+        @include flex (row, flex-satr, center, wrap)
+        .footet_cont_box
+            width: 150px
+
+    .footer_right
+        margin-top: 50px

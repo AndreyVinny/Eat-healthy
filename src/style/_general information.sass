@@ -1,0 +1,47 @@
+$color_text: #000
+$colot_text2: #2C3847
+$color_text_spec: #5FB848
+$colot_fon: #5f6762
+$color_spec_1: #6EBF4B
+$bg_client:#FCFCFC
+
+
+$pc: 1200px
+$notebook: 900px
+$tablet: 720px
+$mobile: 420px
+$mobile-mini: 320px
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+@mixin flex ($fd, $jc, $ai, $fw)
+    display: flex
+    flex-direction: $fd
+    justify-content: $jc
+    align-items: $ai
+    flex-wrap: $fw
+
+.conteiner
+    width: 1200px
+    margin: 0 auto
+    padding: 0px 15px
+
+@media (max-width: $pc)
+    .conteiner
+        width: 900px
+
+@media (max-width: $notebook)
+    .conteiner
+        width: 720px
+
+@media (max-width: $tablet)
+    .conteiner
+        width: 420px
+
+@media (max-width: $mobile)
+    .conteiner
+        width: 320px
