@@ -221,7 +221,7 @@ header {
 }
 .header_main_img img {
   max-width: 140%;
-  height: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 1200px) {
